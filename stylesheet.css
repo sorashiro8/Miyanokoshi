@@ -179,22 +179,3 @@ body {
   footer {
     padding-top: 30px;
   }
-  
-@media (max-width:1000px) {
-    .item{
-      width: 50%;
-    }
-  }
-
-  /* PC向けレイアウト */
-  @media (max-widsth:360px) {
-    .item{
-      width: 100%;
-    }
-  }
-
-  /* スマートフォン向けレイアウト */
-  .company-name {
-    margin: 64px;
-    color: #8F6FD8;
-  }
