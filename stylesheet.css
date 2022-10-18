@@ -16,7 +16,7 @@ body {
   }
   
   .container {
-    width: 1170px;
+    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -78,8 +78,8 @@ body {
   }
   
   .logo {
-    width: 124px;
-    margin-top: 10px;
+    width: 200px;
+    margin-top: -25px;
   }
   
   .header-left {
