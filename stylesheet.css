@@ -185,3 +185,6 @@ body {
   footer {
     padding-top: 30px;
   }
+li {
+  display: inline-block; /* inlineでも可 * /
+}
