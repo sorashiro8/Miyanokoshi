@@ -191,6 +191,10 @@ body {
 li {
   display: inline-block; /* inlineでも可 */
 }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 li a {
     color: white;
     text-decoration: underlines;
