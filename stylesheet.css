@@ -200,21 +200,3 @@ ul li a {
     text-decoration: underline;
     font-size: 20pt;
 }
-a.btn {
-    padding: 12px 24px; /* ボタンのサイズを大きくします */
-    background-color: #239b76; /* 背景色を設定 */
-    color: white; /* テキスト色を白に設定 */
-    display: inline-block; /* インラインブロックで表示 */
-    opacity: 0.8;
-    border-radius: 4px; /* 角を少し丸くします */
-    text-align: center; /* テキストを中央揃えにします */
-    text-decoration: none; /* テキストの下線をなくします */
-}
-
-a.btn:hover {
-    opacity: 1; /* ホバー時の透明度を変更 */
-}
-
-a.btn.message {
-    background-color: #5dca88; /* このクラスが特別に指定された場合の背景色 */
-}
