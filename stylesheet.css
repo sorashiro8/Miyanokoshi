@@ -164,7 +164,7 @@ body {
   }
   
   .message {
-    font-size: 20px;
+    font-size: 24px;
     padding: 15px 40px;
     background-color: #5dca88;
     cursor: pointer;
@@ -200,4 +200,7 @@ ul li a {
     color: white;
     text-decoration: underline;
     font-size: 16pt;
+}
+.spacing {
+    margin-bottom: 20px; /* 必要なスペースに応じて調整 */
 }
