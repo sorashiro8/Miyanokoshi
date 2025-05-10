@@ -204,8 +204,3 @@ ul li a {
 .spacing {
     margin-bottom: 20px; /* 必要なスペースに応じて調整 */
 }
-.google-form-link {
-  font-weight: bold;
-  text-decoration: underline;
-  color: #87CEEB;
-}
