@@ -201,12 +201,13 @@ ul li a {
     text-decoration: underline;
     font-size: 16pt;
 }
-.spacing {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 .link-style {
   color: white;
   text-decoration: underline;
   font-size: 16pt;
+}
+.spacing {
+  margin-top: 20px;  /* 上部にスペース */
+  margin-bottom: 20px;  /* 下部にスペース */
+  display: block;  /* インライン要素にするため、ブロック要素に変更 */
 }
