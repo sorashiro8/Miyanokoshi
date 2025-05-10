@@ -208,6 +208,6 @@ ul li a {
 }
 .spacing {
   margin-top: 20px;  /* 上部にスペース */
-  margin-bottom: 20px;  /* 下部にスペース */
+  margin-bottom: 0px;  /* 下部にスペース */
   display: block;  /* インライン要素にするため、ブロック要素に変更 */
 }
