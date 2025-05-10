@@ -202,5 +202,6 @@ ul li a {
     font-size: 16pt;
 }
 .spacing {
-    margin-bottom: 20px; /* 必要なスペースに応じて調整 */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
