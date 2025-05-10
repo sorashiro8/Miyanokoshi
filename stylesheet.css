@@ -209,3 +209,6 @@ ul li a {
   text-decoration: underline;
   color: #87CEEB;
 }
+.spacing {
+  margin-top: 40px; /* 上に40pxの余白を追加 */
+}
