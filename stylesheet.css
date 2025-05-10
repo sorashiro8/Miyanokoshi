@@ -27,7 +27,7 @@ body {
     letter-spacing: 5px;
   }
   
-　　　　.top-wrapper h2 {
+　　.top-wrapper h2 {
     opacity: 0.7;
     font-size: 25px;
     letter-spacing: 5px;
@@ -203,4 +203,9 @@ ul li a {
 }
 .spacing {
     margin-bottom: 20px; /* 必要なスペースに応じて調整 */
+}
+.google-form-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: blue;
 }
