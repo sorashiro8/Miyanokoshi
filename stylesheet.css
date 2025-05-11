@@ -211,9 +211,43 @@ ul li a {
   margin-bottom: 0px;  /* 下部にスペース */
   display: block;  /* インライン要素にするため、ブロック要素に変更 */
 }
+.art-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: nowrap; /* 折り返さない */
+  overflow-x: auto;   /* 横スクロール可能に */
+  margin-top: 20px;
+}
+
+.art-item {
+  min-width: 300px; /* 狭くても1つずつ見えるように */
+  max-width: 300px;
+  text-align: center;
+  font-size: 16px;
+  flex-shrink: 0; /* 縮小しないように固定 */
+}
+
+.art-item img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.art-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.art-description {
+  text-align: left;
+  font-size: 14px;
+}
+
 .btn.purchase {
   display: inline-block;
-  background-color: #4CAF50; /* 緑色 */
+  background-color: #4CAF50;
   color: white;
   padding: 12px 24px;
   text-align: center;
@@ -227,10 +261,18 @@ ul li a {
 .btn.purchase:hover {
   background-color: #45a049;
 }
+
 @media screen and (max-width: 768px) {
-  .lesson {
-    float: none;
-    width: 80%;
-    margin: 0 auto 20px auto; /* 中央揃えと間隔 */
+  .art-container {
+    justify-content: flex-start; /* 中央揃えではなく左揃えに */
+  }
+
+  .art-item {
+    font-size: 15px;
+  }
+
+  .art-description {
+    font-size: 14px;
   }
 }
+
