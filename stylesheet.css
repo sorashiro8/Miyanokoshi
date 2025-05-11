@@ -300,3 +300,9 @@ footer p {
     max-width: 100%;
   }
 }
+.container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
