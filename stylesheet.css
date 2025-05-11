@@ -287,3 +287,7 @@ footer p {
 .report-btn:hover {
   background-color: #0059c1;
 }
+/* 各セクションの文字サイズを統一 */
+.business-description, .art-sale, .investment-report {
+    font-size: 25px; /* 適切な文字サイズに変更 */
+}
