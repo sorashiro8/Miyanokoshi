@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログイン</title>
 </head>
 <body>
-    <h2>ログイン または 新規登録</h2>
-    <input type="email" id="email" placeholder="メールアドレス">
-    <input type="password" id="password" placeholder="パスワード">
-    <button onclick="login()">ログイン</button>
-    <button onclick="signup()">新規登録</button>
+  <h2>ログイン または 新規登録</h2>
+  <input type="email" id="email" placeholder="メールアドレス">
+  <input type="password" id="password" placeholder="パスワード">
+  <button onclick="login()">ログイン</button>
+  <button onclick="signup()">新規登録</button>
 
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
 
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyBf70k6edKkHuVZkLIoTQudJU_2NJblpWo",
-        authDomain: "miyanokoshi-business.firebaseapp.com",
-        projectId: "miyanokoshi-business",
-        storageBucket: "miyanokoshi-business.firebasestorage.app",
-        messagingSenderId: "254590750755",
-        appId: "1:254590750755:web:e0e0c168a6598ff31b6196",
-        measurementId: "G-SDLLZC59JB"
-      };
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBf70k6edKkHuVZkLIoTQudJU_2NJblpWo",
+      authDomain: "miyanokoshi-business.firebaseapp.com",
+      projectId: "miyanokoshi-business",
+      storageBucket: "miyanokoshi-business.firebasestorage.app",
+      messagingSenderId: "254590750755",
+      appId: "1:254590750755:web:e0e0c168a6598ff31b6196",
+      measurementId: "G-SDLLZC59JB"
+    };
 
-      const app = firebase.initializeApp(firebaseConfig);
-      const auth = firebase.auth();
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
 
-      function login() {
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        auth.signInWithEmailAndPassword(email, password)
-          .then(() => {
-            window.location.href = "report.html";
-          })
-          .catch(error => alert(error.message));
-      }
+    const redirectTo = "https://sorashiro8.github.io/Miyanokoshi/blog";
 
-      function signup() {
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        auth.createUserWithEmailAndPassword(email, password)
-          .then(() => {
-            window.location.href = "report.html";
-          })
-          .catch(error => alert(error.message));
-      }
-    </script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          window.location.href = redirectTo;
+        })
+        .catch(error => alert(error.message));
+    }
+
+    function signup() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          window.location.href = redirectTo;
+        })
+        .catch(error => alert(error.message));
+    }
+  </script>
 </body>
 </html>
-
