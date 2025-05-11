@@ -227,3 +227,10 @@ ul li a {
 .btn.purchase:hover {
   background-color: #45a049;
 }
+@media screen and (max-width: 768px) {
+  .lesson {
+    float: none;
+    width: 80%;
+    margin: 0 auto 20px auto; /* 中央揃えと間隔 */
+  }
+}
