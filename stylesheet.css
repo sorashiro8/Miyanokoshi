@@ -289,3 +289,9 @@ footer p {
 .report-btn:hover {
   background-color: #0059c1;
 }
+@media screen and (max-width: 768px) {
+  .report-title {
+    text-align: center;
+    font-size: 1.6em;
+  }
+}
