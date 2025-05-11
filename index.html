@@ -18,6 +18,23 @@
     <meta name="author" content="宮ノ腰">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBf70k6edKkHuVZkLIoTQudJU_2NJblpWo",
+    authDomain: "miyanokoshi-business.firebaseapp.com",
+    projectId: "miyanokoshi-business",
+    storageBucket: "miyanokoshi-business.appspot.com",
+    messagingSenderId: "254590750755",
+    appId: "★ここはFirebaseコンソールでWebアプリを追加すると出ます"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
   </head>
   <body>
     <header>
@@ -151,6 +168,7 @@
         </div>
         <span class="btn message" onclick="location.href='https://sorashiro8.github.io/Miyanokoshi/blog/'">
       無料レポートを読む
+          <button onclick="checkAuth()">無料レポートを読む</button>
         </span>
       </div>
     </div>
