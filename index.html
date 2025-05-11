@@ -185,6 +185,19 @@
       });
     });
   </script>
+          <script>
+  function checkAuth() {
+    // Firebaseの認証状態を確認し、ログイン済みならレポートを表示
+    const user = firebase.auth().currentUser;
+    if (user) {
+      // ログイン済み：レポートページへ
+      window.location.href = "report.html";
+    } else {
+      // 未ログイン：ログインページへ
+      window.location.href = "auth/login.html";
+    }
+  }
+</script>
 </body>
   </body>
 </html>
