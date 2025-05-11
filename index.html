@@ -150,5 +150,58 @@
       gtag('js', new Date());
       gtag('config', 'G-9L72J3T4T9');
     </script>
+    <!-- Firebase App (必須) -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<!-- Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+<script>
+  // Firebase初期化
+  const firebaseConfig = {
+    apiKey: "AIzaSyBf70k6edKkHuVZkLIoTQudJU_2NJblpWo",
+    authDomain: "miyanokoshi-business.firebaseapp.com",
+    projectId: "miyanokoshi-business",
+    storageBucket: "miyanokoshi-business.firebasestorage.app",
+    messagingSenderId: "254590750755",
+    appId: "1:254590750755:web:e0e0c168a6598ff31b6196",
+    measurementId: "G-SDLLZC59JB"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+  function checkAuth() {
+    const user = firebase.auth().currentUser;
+    if (user) {
+      // ログイン済みならレポートページへ
+      window.location.href = "https://your-report-page.com";
+    } else {
+      // ログインしていなければ、ログインUI表示
+      const email = prompt("メールアドレスを入力してください:");
+      const password = prompt("パスワードを入力してください:");
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+          alert("ログイン成功！レポートページに移動します。");
+          window.location.href = "https://your-report-page.com";
+        })
+        .catch((error) => {
+          if (error.code === 'auth/user-not-found') {
+            // アカウントがなければ新規登録
+            if (confirm("アカウントが見つかりません。新規登録しますか？")) {
+              firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then(() => {
+                  alert("登録完了！レポートページに移動します。");
+                  window.location.href = "https://your-report-page.com";
+                })
+                .catch((err) => {
+                  alert("登録エラー：" + err.message);
+                });
+            }
+          } else {
+            alert("ログインエラー：" + error.message);
+          }
+        });
+    }
+  }
+</script>
   </body>
 </html>
