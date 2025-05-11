@@ -185,46 +185,6 @@
       });
     });
   </script>
-<script>
-  function checkAuth() {
-    // Firebaseの認証状態を確認し、ログイン済みならレポートを表示
-    const user = firebase.auth().currentUser;
-    if (user) {
-      // ログイン済み：レポートページへ
-      window.location.href = "report.html";
-    } else {
-      // 未ログイン：ログインページへ
-      window.location.href = "auth/login.html";
-    }
-  }
-</script>
-          <!-- JavaScriptはここに移動 -->
-<script>
-  function checkAuth() {
-    // Firebase Auth による認証チェック（簡易版）
-    const user = firebase.auth().currentUser;
-    if (user) {
-      // 認証済みならレポートページに遷移
-      window.location.href = "https://your-report-page-url.com";
-    } else {
-      // 未ログインならログインページへ遷移
-      window.location.href = "login.html"; // ここはあなたのログインページURLに変更
-    }
-  }
-
-  // Firebase の初期化（必要に応じて）
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    appId: "YOUR_APP_ID",
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
-
-<!-- Firebase SDKの読み込み -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </body>
   </body>
 </html>
