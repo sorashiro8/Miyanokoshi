@@ -9,13 +9,14 @@
   <h2>ログイン または 新規登録</h2>
   <input type="email" id="email" placeholder="メールアドレス">
   <input type="password" id="password" placeholder="パスワード">
-  <button onclick="login()">ログイン</button>
-  <button onclick="signup()">新規登録</button>
+  <button id="loginBtn">ログイン</button>
+  <button id="signupBtn">新規登録</button>
 
-  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+  <!-- Firebase v9+ Modular SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
 
-  <script>
     const firebaseConfig = {
       apiKey: "AIzaSyBf70k6edKkHuVZkLIoTQudJU_2NJblpWo",
       authDomain: "miyanokoshi-business.firebaseapp.com",
@@ -26,30 +27,30 @@
       measurementId: "G-SDLLZC59JB"
     };
 
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
 
     const redirectTo = "https://sorashiro8.github.io/Miyanokoshi/blog";
 
-    function login() {
+    document.getElementById("loginBtn").addEventListener("click", () => {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
-      auth.signInWithEmailAndPassword(email, password)
+      signInWithEmailAndPassword(auth, email, password)
         .then(() => {
           window.location.href = redirectTo;
         })
-        .catch(error => alert(error.message));
-    }
+        .catch(error => alert("ログインエラー: " + error.message));
+    });
 
-    function signup() {
+    document.getElementById("signupBtn").addEventListener("click", () => {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
-      auth.createUserWithEmailAndPassword(email, password)
+      createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
           window.location.href = redirectTo;
         })
-        .catch(error => alert(error.message));
-    }
+        .catch(error => alert("登録エラー: " + error.message));
+    });
   </script>
 </body>
 </html>
