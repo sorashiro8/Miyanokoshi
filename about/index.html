@@ -1,66 +1,137 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>事業内容</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事業内容・ソリューション | 宮ノ腰</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ページ全体の世界観を統一するインラインCSS（必要に応じてstyles.cssに統合してください） */
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #fafafa; color: #333; line-height: 1.8; margin: 0; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    header { text-align: center; padding: 60px 0; background: #1a1a1a; color: #fff; }
+    header h1 { font-size: 2.5rem; margin-bottom: 20px; letter-spacing: 2px; }
+    header p { max-width: 700px; margin: 0 auto 10px auto; color: #ccc; font-size: 1.1rem; }
+    main { padding: 40px 0; }
+    section { background: #fff; padding: 40px; margin-bottom: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    section h2 { color: #1a1a1a; border-left: 5px solid #ff4500; padding-left: 15px; font-size: 1.6rem; margin-top: 0; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 12px; }
+    .price-tag { color: #ff4500; font-weight: bold; }
+    
+    /* 限定オファー系セクションの特別装飾 */
+    .highlight-section { background-color: #1a1a1a; color: #fff; border-top: 4px solid #ff4500; }
+    .highlight-section h2 { color: #ff4500; border-left: 5px solid #fff; }
+    .benefits-box { background: #2b2b2b; padding: 25px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ff4500; }
+    .btn { display: inline-block; padding: 15px 40px; font-size: 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .btn-report { background-color: #fff; color: #1a1a1a; border: 2px solid #1a1a1a; }
+    .btn-report:hover { background-color: #1a1a1a; color: #fff; border-color: #fff; }
+    .btn-consulting { background-color: #ff4500; color: #fff; }
+    .btn-consulting:hover { background-color: #e03e00; }
+    footer { text-align: center; padding: 40px 0; background: #1a1a1a; color: #888; font-size: 0.9rem; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>事業内容</h1>
-        <p>当事業は資産運用に関するアドバイス、小・中・高・大学に関する教育事業、就学・就職に関するコンサル事業を通して、ご依頼者様の目標を達成するお手伝いを実施しています。</p>
-        <p>下記に具体的な事業内容と実例をご紹介します。</p>
-    </header>
-    <main>
-        <p>本事業は主に4つの分野で構成されています。</p>
-        
-        <section>
-            <h2>オンライン教育</h2>
-            <p>Zoomを利用したオンライン家庭教師により、小・中・高の数学と英語の指導や、ロジカルシンキングや読解力向上に関する教育を提供しています。また、志望理由書の作成や受験校の選定、実験レポートの作成など、幅広いサポートも実施しています。以下は実例です。</p>
-            <ul>
-                <li><strong>高校数学のオンライン家庭教師</strong>（毎週土曜日、時給3,000円）</li>
-                <li><strong>高校英語のオンライン家庭教師</strong>（毎週土曜日、時給3,000円）</li>
-                <li><strong>ロジカルシンキング、読解力に関するオンライン授業</strong>（60分授業、1回3,000円）</li>
-                <li><strong>突発的なレポート作成</strong>（大学のレポート課題、理科の実験レポート、感想文など）<br>※レポート作成は文字数により価格が変わります。詳細はご相談ください。</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>コンサル事業</h2>
-            <p>メールを通じて、通信大学における卒業論文のアウトライン作成や実験方法の検討、データのまとめを行っています。加えて、就職活動におけるエントリーシートの作成・添削や面接指導も実施しています。以下は実例です。</p>
-            <ul>
-                <li><strong>通信大学地域創生学部における卒業論文のアウトライン・実験計画の作成、データまとめ、論文執筆</strong></li>
-                <li><strong>就職活動のエントリーシートの作成・添削</strong></li>
-                <li><strong>Zoomを用いた面接練習</strong><br>※これらはご依頼ボリュームによってり価格が変わります。詳細はご相談ください。</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>資産運用管理</h2>
-            <p>株式投資による安定的な利益成長を目指し、家計に関する最適化アドバイスも行っています。運用成績については順次公開し、YouTubeやXを通じて資産運用の状況や成績もお知らせしています。以下は実例です。</p>
-            <ul>
-                <li><strong>株式投資、資本主義についてのオンライン説明</strong>（60分授業、1回8,000円）</li>
-                <li><strong>個別銘柄を用いた配当収入と値上がり益が見込める適切なポートフォリオの作成</strong>(価格50,000円)</li>
-                <li><strong>サブスク・NHKなどの無駄な支出の解約代行</strong>（価格30,000円）</li>
-                <li><strong>大手携帯キャリアから格安SIMに乗り換え</strong>（価格10,000円）</li>
-                <li><strong>家庭における不用品の選定・整理整頓</strong>（※価格は分量によるため、ご相談ください）</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>ストック事業</h2>
-            <p>ストック事業とは、契約後に毎月支払われる基本料金から得られる収入のことです。当事業では、現在まだ成長段階にあり、以下の取り組みを行っています。</p>
-            <ul>
-                <li><strong>SNSよる定期収入</strong>（現在収入は不安定ですが、今後の成長を期待しています）</li>
-                <li><strong>HPの作成・運用による収入</strong></li>
-                <li><strong>農地を利用した栽培事業</strong>（今後の展開を計画中）</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Miyanokoshi</p>
-    </footer>
-    <script src="script.js"></script>
+
+  <header>
+    <div class="container">
+      <h1>宮ノ腰 事業内容・ソリューション</h1>
+      <p>人的資本の最大化から金融資本・知財へのトランスファーまで。</p>
+      <p>当事業は、最先端エンジニアリング思考に基づく「資産運用管理」「論理教育」「論文・就職コンサル」を通じて、ご依頼者様が労働者フレームワークの本質を見抜き、目標を最短ルートで達成するアーキテクチャを提供します。</p>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section>
+      <h2>📊 資産運用管理・家計アーキテクチャの最適化</h2>
+      <p>世界覇権企業の知財・財務データを冷徹にデバッグし、中長期的に安定した利益成長を目指すポートフォリオ構築と、無駄なキャッシュ流出（ステルス・ドレイン）を徹底的にパージする家計最適化アドバイスを提供しています。</p>
+      <ul>
+        <li><strong>株式投資・資本主義の構造論オンラインレクチャー</strong>（60分セッション：<span class="price-tag">¥8,000</span>）</li>
+        <li><strong>個別銘柄の財務・知財データを用いた、最適配当ポートフォリオ設計</strong>（1案件：<span class="price-tag">¥50,000</span>）</li>
+        <li><strong>固定費デバッグ（サブスク・NHK等の不要契約の解約代行・最適化）</strong>（1案件：<span class="price-tag">¥30,000</span>）</li>
+        <li><strong>通信インフラ最適化（大手キャリアから格安SIMへのリプレイス支援）</strong>（1案件：<span class="price-tag">¥10,000</span>）</li>
+        <li><strong>空間アセット最適化（家庭における不用品の選定・ロジカル整理整頓）</strong>（※分量により要相談）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🎓 オンライン教育・ロジカルシンキング指導</h2>
+      <p>Zoomを用いた完全オンライン指導。単なる暗記ではなく、理系最高峰の特許脳をベースとした「ロジカルシンキング」「読解力向上」に焦点を当て、小・中・高の数英指導から大学の実験レポート作成まで網羅的にサポートします。</p>
+      <ul>
+        <li><strong>高校数学・高度論理思考オンライン指導</strong>（レギュラー指導：<span class="price-tag">時給 ¥3,000</span>）</li>
+        <li><strong>高校英語・構造的読解オンライン指導</strong>（レギュラー指導：<span class="price-tag">時給 ¥3,000</span>）</li>
+        <li><strong>大人のためのロジカルシンキング・思考力強化セッション</strong>（60分：<span class="price-tag">¥3,000</span>）</li>
+        <li><strong>突発的アカデミックライティング支援</strong>（大学課題・理科実験レポート・小論文等の論理構造添削）<br>※文字数・難易度により価格変動。詳細はコックピットよりご相談ください。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📝 アカデミック＆キャリアコンサルティング</h2>
+      <p>非同期（メール等）および同期（Zoom）を組み合わせ、通信制大学における卒業論文の構造設計から実験データのまとめ、就職活動におけるエントリーシート（ES）の論理的リファクタリング、面接のセルフデバッグ指導を行います。</p>
+      <ul>
+        <li><strong>通信大学（地域創生学部等）卒業論文のアウトライン策定・実験計画・データ統合・執筆補佐</strong></li>
+        <li><strong>就職活動・転職におけるエントリーシート（ES）の構築・徹底添削</strong></li>
+        <li><strong>Zoomを用いた模擬面接・自己アピールロジックの最適化指導</strong><br>※これらはご依頼のボリューム（仕様）によって価格が変動します。まずはご相談ください。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🌲 インフラ・ストック型事業開発</h2>
+      <p>個人の時間主権を最大化するため、毎月安定したキャッシュフローを生み出す仕組み（ストックインフラ）を研究・ビルドしています。現在、以下のタイムラインで展開・育成中です。</p>
+      <ul>
+        <li><strong>独自の知財発信による定期収入</strong>（YouTubeやnoteを活用したコンテンツIPのグローバルデプロイ）</li>
+        <li><strong>Webメディア（自社HP）の構築・運用による広告・アフィリエイト収益化</strong></li>
+        <li><strong>リアルアセット運用（農地を活用した栽培事業のグランドデザインと実行計画）</strong></li>
+      </ul>
+    </section>
+
+    <section class="highlight-section" style="text-align: center;">
+      <h2>📈 限定投資レポートのご案内</h2>
+      <p class="report-description" style="text-align: left; max-width: 700px; margin: 20px auto;">
+        「中長期で安定的に資産を増やしたい」「労働依存から脱却したい」というビジネスマンに役立つ内容で、私自身が実践している半導体・インフラ投資手法を網羅的に解説。<br>
+        まずはこのレポートで、あなたの「資本家OSへのアップデート」を始めてみてください。
+      </p>
+      <div class="report-cta" style="margin-top: 30px;">
+        <span class="btn btn-report" onclick="checkAuth()">レポート（要ログイン）を読む</span>
+      </div>
+    </section>
+
+    <section class="highlight-section" style="text-align: center; border-top: 1px solid #333;">
+      <h2>🔒 【各月3名限定】宮ノ腰・個別戦略コンサルティング</h2>
+      <p class="consulting-description" style="text-align: left; max-width: 700px; margin: 20px auto;">
+        他人の作った株価の上下に一喜一憂するフェーズは終了しました。あなたの最大の資本である「脳のCPU」と「固有の経験」をハックし、独自の知財アセットへとトランスファーするための完全個別セッションです。<br><br>
+        本気で「労働者フレームワークからの脱出」を執行したいビジネスマン、および特許・知財思考をマスターしたい技術者のみ、厳正な審査の上でコックピットへお迎えします。
+      </p>
+      <div class="benefits-box" style="text-align: left; max-width: 700px; margin: 0 auto 30px auto;">
+        <p style="margin: 5px 0;">✅ <b>個別資産アロケーションのデバッグ</b>：現在のポートフォリオの構造的欠陥を修正</p>
+        <p style="margin: 5px 0;">✅ <b>知財・副収入アーキテクチャの構築</b>：あなたのスキルを最高単価でパッケージ化</p>
+        <p style="margin: 5px 0;">✅ <b>60分間・完全1対1オンラインセッション</b>（通常価格：¥30,000 / 審査通過者は初回限定優待あり）</p>
+      </div>
+      <div class="btn-wrapper">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSci5pgq9ESm-UFYLULCOmhqzaoHEjIaMGqO49Kok_MspBb0Bw/viewform" target="_blank" class="btn btn-consulting">宮ノ腰に個別相談を仕掛ける（Googleフォーム）</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Miyanokoshi. All Rights Reserved. Learn to innovate, learn to be creative.</p>
+    </div>
+  </footer>
+
+  <script>
+    function checkAuth() {
+      // 親のメインHPにあるFirebase Authと連動させる仕様。今回は外部遷移URLに設定
+      const user = typeof firebase !== 'undefined' ? firebase.auth().currentUser : null;
+      if (user) {
+        window.location.href = "https://sorashiro8.github.io/Miyanokoshi/blog";
+      } else {
+        alert("レポートを読むにはログインが必要です。ログインページに移動します。");
+        window.location.href = "https://sorashiro8.github.io/Miyanokoshi/auth/login.html";
+      }
+    }
+  </script>
 </body>
 </html>
