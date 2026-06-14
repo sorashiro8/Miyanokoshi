@@ -4,17 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ログイン</title>
+  <style>
+    /* 簡易的なデザイン調整：必要に応じてCSSファイルへ移行してください */
+    body { font-family: sans-serif; max-width: 400px; margin: 40px auto; padding: 20px; }
+    input { display: block; width: 100%; margin-bottom: 10px; padding: 8px; box-sizing: border-box; }
+    button { padding: 10px 20px; cursor: pointer; }
+    #signupBtn { background-color: #ff4500; color: white; border: none; }
+  </style>
 </head>
 <body>
   <h2>ログイン または 新規登録</h2>
-  <p>ご新規の方はメールアドレスとパスワードを入力後、新期登録することで無料レポートを閲覧可能です。次回からはログインから入室お願いします。
+  <p>ご新規の方はメールアドレスとパスワードを入力後、新規登録することで無料レポートを閲覧可能です。次回からはログインから入室お願いします。
     <br>※メールアドレスは投資情報のご連絡などに使う場合がございますのでご了承お願いいたします。</p>
-  <input type="email" id="email" placeholder="メールアドレス">
-  <input type="password" id="password" placeholder="パスワード">
+  
+  <input type="email" id="email" placeholder="メールアドレス（半角）">
+  <input type="password" id="password" placeholder="パスワード（6文字以上）">
   <button id="loginBtn">ログイン</button>
   <button id="signupBtn">新規登録</button>
 
-  <!-- Firebase v9+ Modular SDK -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
@@ -34,24 +41,55 @@
 
     const redirectTo = "https://sorashiro8.github.io/Miyanokoshi/blog";
 
+    // ログイン処理
     document.getElementById("loginBtn").addEventListener("click", () => {
-      const email = document.getElementById("email").value;
+      const email = document.getElementById("email").value.trim(); // 空白をパージ
       const password = document.getElementById("password").value;
+
+      if (!email || !password) {
+        alert("メールアドレスとパスワードを入力してください。");
+        return;
+      }
+
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
           window.location.href = redirectTo;
         })
-        .catch(error => alert("ログインエラー: " + error.message));
+        .catch(error => {
+          alert("ログインエラー: " + error.message);
+        });
     });
 
+    // 新規登録処理
     document.getElementById("signupBtn").addEventListener("click", () => {
-      const email = document.getElementById("email").value;
+      const email = document.getElementById("email").value.trim(); // 空白をパージ
       const password = document.getElementById("password").value;
+
+      // 事前デバッグ（バリデーション）
+      if (!email) {
+        alert("メールアドレスを入力してください。");
+        return;
+      }
+      if (password.length < 6) {
+        alert("Firebaseの仕様上、パスワードは6文字以上で設定してください。");
+        return;
+      }
+
       createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
+          alert("アカウントが正常に作成されました。レポートページへ移動します。");
           window.location.href = redirectTo;
         })
-        .catch(error => alert("登録エラー: " + error.message));
+        .catch(error => {
+          // エラーメッセージを分かりやすく翻訳して出力
+          if (error.code === "auth/invalid-email") {
+            alert("登録エラー: メールアドレスの形式が正しくありません。半角英数字で正しく入力されているか確認してください。");
+          } else if (error.code === "auth/email-already-in-use") {
+            alert("登録エラー: このメールアドレスは既に登録されています。ログインをお試しください。");
+          } else {
+            alert("登録エラー: " + error.message);
+          }
+        });
     });
   </script>
 </body>
