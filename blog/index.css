@@ -1,0 +1,302 @@
+/* =========================================
+   Miyanokoshi Capital Investment Blog CSS
+   ========================================= */
+
+body {
+  background-color: #121212; /* 超高級感のあるダーク背景 */
+  color: #e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ヘッダー */
+.blog-header {
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #ff4500; /* 宮ノ腰オレンジ */
+  padding: 20px 0;
+  sticky: top;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-header .logo {
+  color: #ff4500;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4500;
+}
+
+/* 資産ステータスダッシュボード */
+.status-dashboard {
+  background-color: #1a1a1a;
+  padding: 40px 0;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.status-update {
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+}
+
+.dashboard-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.status-card {
+  background-color: #242424;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 20px;
+  width: 33.333%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.card-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.card-value .unit {
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.card-value-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-top: 8px;
+}
+
+/* メインレイアウト (2カラム) */
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+  gap: 40px;
+}
+
+/* 左側：記事本文 */
+.blog-main-content {
+  width: 68%;
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #2d2d2d;
+}
+
+.article-meta {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.post-date { color: #888; margin-right: 15px; }
+.post-category { color: #ff4500; font-weight: bold; }
+
+.article-title {
+  font-size: 2.2rem;
+  color: #fff;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.article-body h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-top: 40px;
+  border-left: 4px solid #ff4500;
+  padding-left: 12px;
+}
+
+.article-body p {
+  color: #ccc;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+blockquote {
+  background-color: #242424;
+  border-left: 4px solid #ff4500;
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 0 6px 6px 0;
+  color: #eee;
+}
+
+/* 保有株テーブル */
+.portfolio-table-wrapper {
+  margin-top: 50px;
+  border-top: 1px solid #333;
+  padding-top: 30px;
+}
+
+.portfolio-table-wrapper h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.portfolio-table th, .portfolio-table td {
+  padding: 14px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.portfolio-table th {
+  background-color: #242424;
+  color: #ff4500;
+  font-weight: bold;
+}
+
+.portfolio-table td { color: #ccc; }
+
+/* 右側：サイドバー */
+.blog-sidebar {
+  width: 28%;
+}
+
+.sidebar-widget {
+  background-color: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.widget-title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive-list li {
+  margin-bottom: 18px;
+}
+
+.archive-list a {
+  text-decoration: none;
+  display: block;
+}
+
+.archive-date {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.archive-title {
+  font-size: 0.95rem;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.archive-list a:hover .archive-title,
+.archive-list a.active .archive-title {
+  color: #ff4500;
+}
+
+/* プロモーション枠 */
+.promo-widget {
+  background: linear-gradient(135deg, #242424 0%, #1a1a1a 100%);
+  border: 1px solid #ff4500;
+}
+
+.promo-widget h3 { color: #fff; margin-top: 0; }
+.promo-widget p { font-size: 0.9rem; color: #ccc; margin-bottom: 20px; }
+
+.sidebar-btn {
+  display: block;
+  background-color: #ff4500;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.sidebar-btn:hover { background-color: #e03e00; }
+
+/* フッター */
+.blog-footer {
+  background-color: #1a1a1a;
+  color: #666;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.85rem;
+  border-top: 1px solid #2d2d2d;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+  .dashboard-grid { flex-direction: column; }
+  .status-card { width: 100%; }
+  .main-layout { flex-direction: column; }
+  .blog-main-content { width: 100%; padding: 25px; }
+  .blog-sidebar { width: 100%; }
+}
