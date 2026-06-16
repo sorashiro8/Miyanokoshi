@@ -178,16 +178,25 @@ header {
 
 .lesson-icon {
   position: relative;
+  display: flex;            /* Flexboxを有効化 */
+  justify-content: center;   /* 水平方向の中央揃え */
+  align-items: center;       /* 垂直方向の中央揃え */
+}
+
+.lesson-icon img {
+  display: block;
+  width: 100%;               /* 画像の幅を親要素に合わせる */
+  height: auto;
 }
 
 .lesson-icon p {
   position: absolute;
-  top: 35px;
-  width: 100%;
+  margin: 0;
   color: white;
   font-size: 18pt;
   font-weight: bold;
-  margin: 0;
+  text-align: center;
+  /* top: 35px; は削除します */
 }
 
 .txt-contents {
